@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="pt-pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Results summary component</title>
+
+  <style>
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&family=Cookie&family=Hanken+Grotesk:wght@500;700;800&family=Outfit:wght@400;700&display=swap');
+    
+    body{
+      background-color:hsl(221, 100%, 96%) ;
+      font-family: 'Hanken Grotesk', sans-serif;
+    }
+    .workspace{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+
+      
+    }
+    
+    .container{
+      border-radius: 20px;
+      width: 600px;
+      height: 400px;
+
+      display: flex;
+      flex-direction: flex;
+      align-items: center;
+      box-shadow: 0px 0px 2px rgba(54, 53, 53, 0.507);
+    }
+
+    .part1{
+      border-radius: 20px;
+      width: 300px;
+      height:400px;
+      
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      background-image: linear-gradient(to top, hsla(256, 72%, 46%, 1), hsl(241, 81%, 54%) , hsl(252, 100%, 67%));
+
+    }
+    .part1 h1{
+      color: rgba(255, 255, 255, 0.808);
+      font-size: 1.2em;
+      padding-top: 15px;
+    }
+    .circo{
+      
+      
+      border-radius: 50%;
+      width: 150px;
+      height: 150px;
+      margin-top: 20px; 
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      background-image: linear-gradient(to bottom, hsla(256, 72%, 46%, 1), hsl(241, 81%, 54%) );
+      
+    }
+    div .p1{
+      position: absolute;
+      
+      color: white;
+      font-size: 3em;
+      font-weight: 600;
+    }
+      div .p2{
+      padding-top: 5em;
+      color: rgba(255, 255, 255, 0.486);
+      font-size: 1em;
+    }
+    footer{
+      text-align: center;
+      color: rgb(255, 255, 255);
+      font-size: .9em;
+    }
+
+
+
+    .part2{
+      display: flex;
+      flex-direction: column;
+      
+      width: 300px;
+      height: 400px;
+      
+      
+
+    }
+    .titulo{
+      color: hsl(224, 30%, 27%);
+      padding-left: 20px;
+      font-size: 1.5em;
+      }
+      
+      .space{
+        width: 300px;
+        height: 220px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 10px;
+        
+      }
+      .dados {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 300px;
+        height: 200px;
+      
+      }
+
+    
+
+
+      .dados p{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        margin: 3px;
+        border-radius: 10px;
+        width: 240px;
+        height:40px;
+        background-color: hsl(241, 100%, 89%);
+        
+        
+        
+      }
+      p#reaction{ color: hsl(0, 100%, 67%);}
+      p#memory{ color:hsl(39, 100%, 56%);}
+      p#verbal{ color: hsl(166, 100%, 37%);}
+      p#visual{ color: hsl(234, 85%, 45%);}
+      
+      span{
+        color: hsl(224, 30%, 27%);
+      }
+      .dados a{
+        text-decoration: none;
+        color: rgb(146, 143, 143) ;
+      }
+      .button {
+        
+        margin: auto;
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 200px;
+        height: 40px;
+        color: white;
+        background-color: hsl(241, 81%, 54%);
+        border-radius: 20px;
+        
+      }
+      .button:hover{
+        background-color: hsl(224, 30%, 27%);
+        cursor: pointer;
+      }
+
+      @media  (max-width:510px) {
+        .container{
+      border-radius: 20px;
+      width: 300px;
+      height: 800px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      }
+      
+    }
+      .circo{
+        width: 120px;
+        height: 120px;
+      }
+    }
+
+
+</style>
+</head>
+<body>
+
+  <main class="workspace">
+    <div class="container">
+      
+
+      <div class="part1">
+        <h1>Seu Resultado</h1>
+        <div class="circo">
+          <p class="p1">79</p>
+          <p class="p2">of 100</p>
+        </div>
+        <footer>
+          <h2> Ótimo </h2>
+          <p>  Você obteve pontuação superior a 65% das<br> das pessoas que fizeram <br> esse testes.</p>
+        </footer>
+      </div>
+
+      <div class="part2">
+        <h1 class="titulo">Resumo</h1>
+          
+        <div class="space">
+          <div class="dados">
+            <div > <p id="reaction">Reaction <span>80<a href="#">/100</a> </span></p></div>
+            <div > <p id="memory">Memory<span> 92<a href="#">/100</a></span></p></div>
+            <div > <p id="verbal">Verbal <span>61<a href="#">/100</a></span></p></div>
+            <div><p  id="visual"> Visual <span>72<a href="#">/100</a></span></p></div>
+          </div>
+        </div>
+
+        <div class="button">Continuar</div>
+      </div>
+
+
+    </div>
+  </main>
+
+</body>
+</html>
